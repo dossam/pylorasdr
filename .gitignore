@@ -1,0 +1,8 @@
+.gitignore
+.vscode/
+*.png
+__pycache__
+test/
+trash_bin/
+*.code-workspace
+*.egg-info
