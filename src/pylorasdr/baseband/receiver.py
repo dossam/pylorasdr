@@ -602,7 +602,7 @@ class Receiver:
 
             # -- compute the number of symbols (header + payload)
             n_blk = np.ceil((8*self._rx_pl_len - 4*self.sf + 28 + 16*self._rx_has_crc - 20*self.implicit_hdr)/(4*(self.sf - 2*self._ldro)))
-            self._n_symb = np.int8(8 + max(n_blk*(self._rx_cr + 4), 0))
+            self._n_symb = np.uint32(8 + max(n_blk*(self._rx_cr + 4), 0))
 
             # -- allocated payload symbols array
             if self.soft_decoding:
