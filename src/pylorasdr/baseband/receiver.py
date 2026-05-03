@@ -568,7 +568,7 @@ class Receiver:
                 rx_hdr_crc = (self._hdr_nib[3, 0] << 4) + bin2dec(self._hdr_nib[4, :], "right-msb")
 
                 c4 = self._hdr_nib[0, 3] ^ self._hdr_nib[0, 2] ^ self._hdr_nib[0, 1] ^ self._hdr_nib[0, 0]
-                c3 = self._hdr_nib[0, 3] ^ self._hdr_nib[1, 3] ^ self._hdr_nib[1, 2] ^ self._hdr_nib[1, 1] ^ self._hdr_nib[1, 0]
+                c3 = self._hdr_nib[0, 3] ^ self._hdr_nib[1, 3] ^ self._hdr_nib[1, 2] ^ self._hdr_nib[1, 1] ^ self._hdr_nib[2, 0]
                 c2 = self._hdr_nib[0, 2] ^ self._hdr_nib[1, 3] ^ self._hdr_nib[1, 0] ^ self._hdr_nib[2, 3] ^ self._hdr_nib[2, 1]
                 c1 = self._hdr_nib[0, 1] ^ self._hdr_nib[1, 2] ^ self._hdr_nib[1, 0] ^ self._hdr_nib[2, 2] ^ self._hdr_nib[2, 1] ^ self._hdr_nib[2, 0]
                 c0 = self._hdr_nib[0, 0] ^ self._hdr_nib[1, 1] ^ self._hdr_nib[2, 3] ^ self._hdr_nib[2, 2] ^ self._hdr_nib[2, 1] ^ self._hdr_nib[2, 0]

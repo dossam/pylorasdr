@@ -204,7 +204,7 @@ class Transmitter:
 
             # -- compute and append header crc
             c4 = hdr_nib[0, 3] ^ hdr_nib[0, 2] ^ hdr_nib[0, 1] ^ hdr_nib[0, 0]
-            c3 = hdr_nib[0, 3] ^ hdr_nib[1, 3] ^ hdr_nib[1, 2] ^ hdr_nib[1, 1] ^ hdr_nib[1, 0]
+            c3 = hdr_nib[0, 3] ^ hdr_nib[1, 3] ^ hdr_nib[1, 2] ^ hdr_nib[1, 1] ^ hdr_nib[2, 0]
             c2 = hdr_nib[0, 2] ^ hdr_nib[1, 3] ^ hdr_nib[1, 0] ^ hdr_nib[2, 3] ^ hdr_nib[2, 1]
             c1 = hdr_nib[0, 1] ^ hdr_nib[1, 2] ^ hdr_nib[1, 0] ^ hdr_nib[2, 2] ^ hdr_nib[2, 1] ^ hdr_nib[2, 0]
             c0 = hdr_nib[0, 0] ^ hdr_nib[1, 1] ^ hdr_nib[2, 3] ^ hdr_nib[2, 2] ^ hdr_nib[2, 1] ^ hdr_nib[2, 0]
