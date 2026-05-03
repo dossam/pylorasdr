@@ -42,13 +42,13 @@ The library itself only depends on `numpy`. Depending on your use case, addition
 - The FER simulation example requires `matplotlib` for FER plot.
 - Interfacing with SDR requires `SoapySDR`, including of course a functioal driver for the target SDR platform.
 
-# TODO:
+## TODO:
 Incoming changes and improvements are still on the way, including:
 - A support for downlink frames (Inverted IQ)
 - SFO compensation in the receiver (currently not implemented)
 - Robust input arguments validation for the underlying building blocks (only if you are thinkering with those blocks)
 
-# References:
+## References:
 For more details about the LoRa modulation and underlying coding/decoding mechanisms, you might want to check this useful reverse-engineering report at https://www.epfl.ch/labs/tcl/wp-content/uploads/2020/02/Reverse_Eng_Report.pdf (I am not the author; just sharing).
 
 ## Credit
