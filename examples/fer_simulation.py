@@ -61,7 +61,7 @@ for snr_idx in range(len(snr_dB)):
             circ_buf.clear()
 
         circ_buf.write(samples_noisy)                
-        lora_rx.set_buffer(circ_buf)
+        lora_rx.attach_buffer(circ_buf)
 
         frame = lora_rx.start()
         if not frame['success']:

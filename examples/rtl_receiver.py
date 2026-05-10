@@ -77,7 +77,7 @@ lora_rx.register_frame_handler(print_payload_hex)
 # create and attach buffer to receiver
 buf_size = 2**18
 circ_buf = CircBuffer(buf_size)
-lora_rx.set_buffer(circ_buf)
+lora_rx.attach_buffer(circ_buf)
 
 # initialize SDR rx (samples rx thread) 
 rx_thread = SDRReceiver(circ_buf)

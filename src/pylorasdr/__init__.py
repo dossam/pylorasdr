@@ -4,7 +4,7 @@
 PyLoRaSDR
 =============
 
-A baseband signal processing library for encoding and decoding LoRa frames.
+A baseband signal processing library for generating and processing LoRa frames.
 
 Features:
 - Payload -> Full frame IQ samples generation
