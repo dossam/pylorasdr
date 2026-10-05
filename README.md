@@ -7,11 +7,11 @@ This is a Python library for generating and processing baseband LoRa signals. It
 The public API exposes:
 - `CircBuffer`: a circular buffer implementation. It holds the samples to be processed by the receiver.
 - `Receiver`: a baseband receiver implementation. Requires a buffer attached with the `Receiver.attach_buffer()` method. It processes the samples contained in the buffer to detect and decode potential LoRa frames, according to provided frame parameters (`bw`, `sf`, `cr`).
-- `Transmitter`: a baseband transmitter implementation. Builds a full LoRa frame from a provided payload and to frame parameters (`bw`, `sf`, `cr`).
+- `Transmitter`: a baseband transmitter implementation. Builds a full LoRa frame from a provided payload and according to frame parameters (`bw`, `sf`, `cr`).
 
 The `Receiver` operates in two modes:
-- A continuous mode (default), where it continuously looks for and decodes incoming frames, reports decoded frame through a registered callback, waits for more samples if empty-buffer is reached, and starts over. This is the recommended mode for interfacing with SDR.
-- A one-shot mode. It processes the samples until it reached empty-buffer, and returns the frame decoded if any. This mode is recommended for simulation, and is set with `Receiver.set_one()`.
+- A continuous mode (default), where it continuously looks for and decodes incoming frames, reports decoded frame through a registered callback, waits for more samples if empty-buffer is reached, and starts over. This is the recommended mode for interfacing with an SDR.
+- A one-shot mode. It processes the samples until it reached empty-buffer, and returns the frame decoded if any. This mode is recommended for simulation, and is set with `Receiver.set_one_shot()`.
 
 The receiver currently supports both uplink and downlink frames, which are automatically detected and decoded.
 
@@ -23,7 +23,7 @@ Although all the current modules are tested and work 'as-is', this is still a wo
 ## Installation
 - Clone this repo:
 ```bash 
-    git clone [text](https://github.com/dossam/pylorasdr.git)
+    git clone https://github.com/dossam/pylorasdr.git
 ```
 
 - Move into the repo folder:
